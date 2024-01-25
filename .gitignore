@@ -1,7 +1,6 @@
 # Include specific directories
-!../nvim/
-!../alacritty/
-!../../.tmux.conf
+# !nvim/
+# !alacritty/
 # !tmux/
 # !i3/
 # !polybar/
@@ -14,7 +13,3 @@ debug
 foo.*
 *.log
 data
-
-# Ignore all other files and directories
-/*
-
