@@ -1,3 +1,11 @@
+# Include specific directories
+!../nvim/
+!../alacritty/
+!../../.tmux.conf
+# !tmux/
+# !i3/
+# !polybar/
+
 tt.*
 .tests
 doc/tags
@@ -6,3 +14,7 @@ debug
 foo.*
 *.log
 data
+
+# Ignore all other files and directories
+/*
+
