@@ -43,7 +43,7 @@ return {
           ["@lsp.type.variable"] = { fg = "#D3C6AA" },
           ["@lsp.type.decorator"] = { fg = "#D3C6AA" },
           ["@lsp.type.property"] = { fg = "#D3C6AA" },
-          ["@lsp.type.namespace"] = { fg = "#a1a352" },
+          ["@lsp.type.namespace"] = { fg = "#D3C6AA" },
         },
         dim_inactive = false,
         transparent_mode = false,
@@ -52,36 +52,3 @@ return {
     end
   }
 }
-
--- return {
---   {
---     'rose-pine/neovim',
---     lazy = false,
---     name = 'rose-pine',
---     priority = 1000,
---     config = function()
---       require('rose-pine').setup({
-
---       })
---       vim.cmd.colorscheme "rose-pine"
---     end
---   }
--- }
-
-
--- return {
---   {
---     'nanotech/jellybeans.vim',
---     lazy = false,
---     name = 'jellybeans',
---     priority = 1000,
---     config = function()
---       -- require('jellybeans').setup({
-
---       -- })
---       vim.cmd.colorscheme "jellybeans"
---     end
---   }
--- }
-
-
