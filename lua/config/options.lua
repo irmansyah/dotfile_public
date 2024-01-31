@@ -44,9 +44,4 @@ opt.swapfile = false
 opt.formatoptions:append({ "r" })
 
 vim.o.relativenumber = true
-vim.o.showmode = false  -- Disable showing mode in the command line
 vim.o.laststatus = 2
-
-if vim.fn.has("nvim-0.8") == 1 then
-    opt.cmdheight = 0
-end
