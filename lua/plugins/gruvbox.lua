@@ -6,7 +6,6 @@ return {
     priority = 1000,
     config = function()
       require("gruvbox").setup({
-        -- terminal_colors = false, -- add neovim terminal colors
         undercurl = true,
         underline = true,
         bold = true,
@@ -44,27 +43,9 @@ return {
           ["@lsp.type.namespace"] = { fg = "#D3C6AA" },
         },
         dim_inactive = false,
-        transparent_mode = false,
       })
-      vim.cmd.colorscheme "gruvbox"
+      -- vim.cmd.colorscheme "gruvbox"
+      vim.cmd("colorscheme gruvbox")
     end
   },
-  -- {
-  --   "catppuccin/nvim",
-  --   lazy = false,
-  --   name = "catppuccin",
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme "catppuccin"
-  --   end
-  -- },
-  -- {
-  --   "rose-pine/neovim",
-  --   name = "rose-pine",
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme "rose-pine"
-  --   end
-  -- },
 }
