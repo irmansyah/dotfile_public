@@ -30,7 +30,7 @@ return {
         capabilities = capabilities
       })
       lspconfig.dartls.setup({
-        -- capabilities = capabilities
+        capabilities = capabilities
       })
 
       vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, {})
