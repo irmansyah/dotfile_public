@@ -17,7 +17,7 @@ return {
       require("gruvbox").setup({
         undercurl = true,
         underline = true,
-        bold = true,
+        bold = false,
         italic = {
           strings = true,
           emphasis = true,
@@ -45,7 +45,6 @@ return {
           enable = true,
         },
         overrides = {
-
           Directory = { fg = yellow },
           GitSignsChange = { fg = orange },
           markdownCode = { fg = yellow },

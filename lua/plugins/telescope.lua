@@ -24,7 +24,7 @@ return {
       vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
       -- Additional keymap for buffers using built-in Telescope function
-      vim.api.nvim_set_keymap("n", "<leader>b", ":Telescope buffers<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<leader>bb", ":Telescope buffers<CR>", { noremap = true, silent = true })
 
       -- Load the ui-select extension
       require("telescope").load_extension("ui-select")

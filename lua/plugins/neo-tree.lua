@@ -26,6 +26,6 @@ return {
 		vim.keymap.set("n", "<leader>[", ":Neotree filesystem focus<CR>", {})
 		vim.keymap.set("n", "<C-t>", ":Neotree filesystem reveal left<CR>", {})
 		vim.keymap.set("n", "<C-f>", ":Neotree filesystem toggle<CR>", {})
-		vim.keymap.set("n", "<C-n>", ":Neotree buffers reveal float<CR>", {})
+		-- vim.keymap.set("n", "<C-n>", ":Neotree buffers reveal float<CR>", {})
 	end,
 }
