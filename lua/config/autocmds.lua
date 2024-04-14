@@ -13,7 +13,7 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 
 
-local no_insert_directories = {'/home/mane/.development', '/home/mane/.pub-cache'}
+local no_insert_directories = { '/home/mane/.development', '/home/mane/.pub-cache', '/home/mane/.cargo', '/home/mane/.rustup' }
 
 _G.my_config = {}
 
@@ -23,10 +23,10 @@ function _G.my_config.check_no_insert()
   local current_directory = vim.fn.expand('%:p:h')
 
   for _, dir in ipairs(no_insert_directories) do
-      if string.find(current_directory, dir, 1, true) then
-          isNoInsertDirectory = true
-          break
-      end
+    if string.find(current_directory, dir, 1, true) then
+      isNoInsertDirectory = true
+      break
+    end
   end
 
   if isNoInsertDirectory then

@@ -23,11 +23,11 @@ return {
         --   adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
         -- },
         server = {
-          capabilities = require("cmp_nvim_lsp").default_capabilities(),
-          on_attach = function(_, _)
-            -- vim.keymap.set("n", "<leader>k", rt.hover_actions.hover_actions, { buffer = bufnr })
-            -- vim.keymap.set("n", "<leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-          end,
+          -- capabilities = require("cmp_nvim_lsp").default_capabilities(),
+          -- on_attach = function(_, _)
+          --   -- vim.keymap.set("n", "<leader>k", rt.hover_actions.hover_actions, { buffer = bufnr })
+          --   -- vim.keymap.set("n", "<leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+          -- end,
         },
         tools = {
           hover_actions = {
