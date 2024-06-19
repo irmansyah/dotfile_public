@@ -55,8 +55,7 @@ return {
         },
         dim_inactive = false,
       })
-      -- vim.cmd.colorscheme "gruvbox"
-      vim.cmd("colorscheme gruvbox")
+      vim.cmd([[colorscheme gruvbox]])
     end
   },
   {

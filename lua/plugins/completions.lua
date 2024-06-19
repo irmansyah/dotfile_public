@@ -35,7 +35,8 @@ return {
           ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
         }),
         completion = {
-          keyword_length = 5,
+          -- keyword_length = 5,
+          -- keyword_length = 1,
         },
         sources = cmp.config.sources({
           { name = "nvim_lsp" },

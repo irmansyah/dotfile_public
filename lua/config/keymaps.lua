@@ -19,6 +19,7 @@ function ToggleResizeWidth()
         vim.cmd('vertical resize ' .. default_width)
     end
 end
+
 function ToggleResizeHeight()
     local current_width = vim.api.nvim_win_get_height(0)
     local default_height = 20
@@ -30,4 +31,5 @@ function ToggleResizeHeight()
         vim.cmd('horizontal resize ' .. default_height)
     end
 end
+
 setkeymap('n', '<leader>t', ':lua ToggleResizeHeight()<CR>', { noremap = true, silent = true })

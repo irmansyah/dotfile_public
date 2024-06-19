@@ -5,7 +5,7 @@ return {
 
     local task = nio.run(function()
       nio.sleep(10)
-      print("Hello world")
+      print("Hello Mane")
     end)
   end,
 }
