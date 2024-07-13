@@ -5,7 +5,7 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
     "MunifTanjim/nui.nvim",
-    "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
   },
   config = function()
     -- If you want icons for diagnostic errors, you'll need to define them somewhere:
@@ -33,6 +33,15 @@ return {
           enabled = false,
         },
       },
+      diagnostics = {
+        enable = true,
+        icons = {
+          hint = "",
+          info = "",
+          warning = "",
+          error = "",
+        },
+      },
       window = {
         position = "bottom",
         width = 32,
@@ -53,11 +62,11 @@ return {
       vim.cmd(neotree_command)
     end
 
-
     -- vim.keymap.set("n", "<C-t>", ":Neotree filesystem reveal toggle<CR>", {})
     -- vim.keymap.set("n", "<C-f>", ":Neotree filesystem toggle<CR>", { noremap = true, silent = true })
     -- setkeymap('n', '<C-t>', 'lua open_neotree_or_close_no_name(":Neotree filesystem reveal toggle")<CR>', {})
-    setkeymap('n', '<C-t>', ':lua OpenNeoTree(":Neotree filesystem reveal toggle")<CR>', { noremap = true, silent = true })
+    setkeymap('n', '<C-t>', ':lua OpenNeoTree(":Neotree filesystem reveal toggle")<CR>',
+      { noremap = true, silent = true })
     setkeymap("n", "<C-f>", ':lua OpenNeoTree(":Neotree filesystem toggle")<CR>', {})
   end,
 }

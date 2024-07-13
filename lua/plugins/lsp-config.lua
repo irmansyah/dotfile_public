@@ -14,36 +14,33 @@ return {
     },
   },
   {
-    'simrat39/rust-tools.nvim',
-    lazy = false,
+    "simrat39/rust-tools.nvim",
     config = function()
-      local rt = require("rust-tools")
-      rt.setup({
-        -- dap = {
-        --   adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
-        -- },
-        server = {
-          -- capabilities = require("cmp_nvim_lsp").default_capabilities(),
-          -- on_attach = function(_, _)
-          --   -- vim.keymap.set("n", "<leader>k", rt.hover_actions.hover_actions, { buffer = bufnr })
-          --   -- vim.keymap.set("n", "<leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-          -- end,
-        },
-        tools = {
-          hover_actions = {
-            auto_focus = true,
-          },
-        },
-      })
+      require("rust-tools").setup({})
     end,
   },
   {
     "neovim/nvim-lspconfig",
+    init_options = {
+      configurationSection = { "html", "css", "javascript" },
+      embeddedLanguages = {
+        css = true,
+        javascript = true
+      },
+      userLanguages = {
+        eelixir = "html-eex",
+        eruby = "erb",
+        rust = "html",
+      },
+    },
     lazy = false,
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
       local lspconfig = require("lspconfig")
+
+      lspconfig.rust_analyzer.setup({
+        capabilities = capabilities
+      })
       lspconfig.dartls.setup({
         capabilities = capabilities
       })
@@ -52,21 +49,6 @@ return {
       })
       lspconfig.lua_ls.setup({
         capabilities = capabilities
-      })
-      lspconfig.rust_analyzer.setup({
-        capabilities = capabilities
-      })
-      lspconfig.html.setup({
-        cmd = { "vscode-html-language-server", "--stdio" },
-        filetypes = { "html" },
-        init_options = {
-          configurationSection = { "html", "css", "javascript" },
-          embeddedLanguages = {
-            css = true,
-            javascript = true
-          }
-        },
-        settings = {},
       })
 
       vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, {})

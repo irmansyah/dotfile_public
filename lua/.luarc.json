@@ -1,6 +1,10 @@
 {
     "diagnostics.globals": [
         "vim",
-        "ev"
+        "ev",
+        "show_error_files"
+    ],
+    "diagnostics.disable": [
+        "redefined-local"
     ]
 }
