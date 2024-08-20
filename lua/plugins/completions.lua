@@ -11,6 +11,14 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
+    requires = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/vim-vsnip",
+      "hrsh7th/cmp-vsnip",
+    },
     config = function()
       local cmp = require("cmp")
       require("luasnip.loaders.from_vscode").lazy_load()
@@ -36,13 +44,13 @@ return {
         }),
         completion = {
           -- keyword_length = 5,
-          -- keyword_length = 1,
+          keyword_length = 2,
         },
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
-          { name = "luasnip" }, -- For luasnip users.
-        }, {
           { name = "buffer" },
+          { name = "path" },
+          { name = "cmdline" },
         }),
       })
     end,
