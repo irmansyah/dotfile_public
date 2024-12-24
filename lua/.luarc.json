@@ -5,6 +5,7 @@
         "show_error_files"
     ],
     "diagnostics.disable": [
-        "redefined-local"
+        "redefined-local",
+        "assign-type-mismatch"
     ]
 }

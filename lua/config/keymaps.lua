@@ -3,6 +3,9 @@
 -- Add any additional keymaps here
 local setkeymap = vim.api.nvim_set_keymap
 
+local discipline = require('mane.discipline')
+discipline.cowboy()
+
 setkeymap("n", "<leader>h", ":wincmd h <CR>", { silent = true })
 setkeymap("n", "<leader>j", ":wincmd j <CR>", { silent = true })
 setkeymap("n", "<leader>k", ":wincmd k <CR>", { silent = true })
