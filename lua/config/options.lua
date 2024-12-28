@@ -43,5 +43,6 @@ opt.swapfile = false
 -- Add asterisks in block comments
 opt.formatoptions:append({ "r" })
 
+vim.o.shell = '/bin/zsh'
 vim.o.relativenumber = true
 vim.o.laststatus = 2

@@ -2,7 +2,9 @@
     "diagnostics.globals": [
         "vim",
         "ev",
-        "show_error_files"
+        "show_error_files",
+        "mane",
+        "replace_text_in_quotes_to_snake_case"
     ],
     "diagnostics.disable": [
         "redefined-local",
