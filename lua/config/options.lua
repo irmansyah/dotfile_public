@@ -24,7 +24,7 @@ opt.cmdheight = 1
 opt.laststatus = 2
 opt.expandtab = true
 opt.scrolloff = 10
-opt.shell = "fish"
+opt.shell = "zsh"
 opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 opt.inccommand = "split"
 opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
@@ -43,5 +43,11 @@ opt.swapfile = false
 -- Add asterisks in block comments
 opt.formatoptions:append({ "r" })
 
+vim.o.shell = '/bin/zsh'
+vim.o.number = true
 vim.o.relativenumber = true
+vim.o.cursorline = true
 vim.o.laststatus = 2
+
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"

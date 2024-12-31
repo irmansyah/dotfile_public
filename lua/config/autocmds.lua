@@ -13,7 +13,8 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 
 
-local no_insert_directories = { '/home/mane/.development', '/home/mane/.pub-cache', '/home/mane/.cargo', '/home/mane/.rustup' }
+local no_insert_directories = { '/home/mane/.development', '/home/mane/.pub-cache', '/home/mane/.cargo',
+  '/home/mane/.rustup' }
 
 _G.my_config = {}
 
@@ -45,3 +46,13 @@ vim.api.nvim_exec([[
     autocmd BufReadPost,InsertEnter,BufRead,BufNewFile * lua _G.my_config.check_no_insert()
   augroup END
 ]], false)
+
+-- vim.api.nvim_create_user_command('ClearImages', function()
+--   -- vim.fn.system('kitty +kitten icat --clear')
+--   vim.cmd([[lua require("image").clear()]])
+-- end, {})
+
+-- vim.api.nvim_create_user_command('ClearImages', function()
+--   vim.fn.system("printf '\\033_Ga=d\\033\\\\'")
+-- end, {})
+-- vim.api.nvim_set_keymap('n', '<leader>ci', ':ClearImages<CR>', { noremap = true, silent = true })
