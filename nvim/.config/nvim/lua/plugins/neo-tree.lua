@@ -130,7 +130,6 @@ return {
                 print("node : " .. node.path)
                 -- vim.fn.system('kitty +kitten icat --clear')
                 -- vim.fn.jobstart('kitty +kitten icat ' .. vim.fn.shellescape(node.path), { detach = true })
-                vim.fn.jobstart('kitty +kitten icat --transfer-mode=memory /home/mane/works/_external/side/paroin-app/assets/imgs/banner_bg.png', { detach = true })
               end
             end,
 
@@ -179,9 +178,13 @@ return {
       -- vim.keymap.set("n", "<C-t>", ":Neotree filesystem reveal toggle<CR>", {})
       -- vim.keymap.set("n", "<C-f>", ":Neotree filesystem toggle<CR>", { noremap = true, silent = true })
       -- setkeymap('n', '<C-t>', 'lua open_neotree_or_close_no_name(":Neotree filesystem reveal toggle")<CR>', {})
+      -- setkeymap("n", "<C-f>", ':lua OpenNeoTree(":Neotree filesystem toggle")<CR>', { noremap = true, silent = true })
+      -- setkeymap('n', '<C-t>', ':lua OpenNeoTree(":Neotree filesystem reveal toggle")<CR>',
+
+      setkeymap("n", "<C-f>", ':lua OpenNeoTree(":Neotree filesystem toggle")<CR>',
+        { noremap = true, silent = true })
       setkeymap('n', '<C-t>', ':lua OpenNeoTree(":Neotree filesystem reveal toggle")<CR>',
         { noremap = true, silent = true })
-      setkeymap("n", "<C-f>", ':lua OpenNeoTree(":Neotree filesystem toggle")<CR>', { noremap = true, silent = true })
       setkeymap("n", "<C-g>", ':Neotree float git_status<CR>', {})
     end,
   },
