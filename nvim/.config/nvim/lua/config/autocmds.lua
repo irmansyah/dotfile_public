@@ -12,7 +12,6 @@ vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 
-
 local no_insert_directories = { '/home/mane/.development', '/home/mane/.pub-cache', '/home/mane/.cargo',
   '/home/mane/.rustup' }
 
@@ -47,12 +46,23 @@ vim.api.nvim_exec([[
   augroup END
 ]], false)
 
--- vim.api.nvim_create_user_command('ClearImages', function()
---   -- vim.fn.system('kitty +kitten icat --clear')
---   vim.cmd([[lua require("image").clear()]])
--- end, {})
+vim.cmd [[
+  " Enter Normal mode from terminal mode
+  tnoremap <Esc> <C-\><C-n>
 
--- vim.api.nvim_create_user_command('ClearImages', function()
---   vim.fn.system("printf '\\033_Ga=d\\033\\\\'")
--- end, {})
--- vim.api.nvim_set_keymap('n', '<leader>ci', ':ClearImages<CR>', { noremap = true, silent = true })
+  " Use Vim-style navigation in terminal mode
+  tnoremap <C-h> <C-\><C-n><C-w>h
+  tnoremap <C-j> <C-\><C-n><C-w>j
+  tnoremap <C-k> <C-\><C-n><C-w>k
+  tnoremap <C-l> <C-\><C-n><C-w>l
+
+  " Resize splits in terminal mode
+  tnoremap <C-Up> <C-\><C-n>:resize +2<CR>
+  tnoremap <C-Down> <C-\><C-n>:resize -2<CR>
+  tnoremap <C-Left> <C-\><C-n>:vertical resize -2<CR>
+  tnoremap <C-Right> <C-\><C-n>:vertical resize +2<CR>
+
+  " Easy exit from terminal to close terminal window
+  tnoremap <C-q> <C-\><C-n>:q!<CR>
+
+]]

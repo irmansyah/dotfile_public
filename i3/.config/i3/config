@@ -249,6 +249,8 @@ bindsym --release $mod+p exec ~/.config/scrot/generate_scrot.sh
 # Start Firefox
 # bindsym $mod+Shift+f exec firefox
 
+bindsym $mod+i exec hints
+
 # Rofi run
 bindsym $mod+space exec rofi -show drun -run-shell-command
 # bindsym $mod+space exec --no-startup-id i3-dmenu-desktop

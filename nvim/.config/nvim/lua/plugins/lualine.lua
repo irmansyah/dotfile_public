@@ -17,18 +17,20 @@ return {
         lualine_c = {
           {
             function()
-              local cwd = vim.fn.getcwd() -- Get the current working directory
-              local home = vim.fn.expand("~") -- Get the home directory
-              -- Remove the home directory and the first-level folder
-              local trimmed_path = cwd:gsub("^" .. home .. "/[^/]+", "")
-              -- Return the cleaned-up path or fallback to the full path
-              return trimmed_path == "" and cwd or trimmed_path:sub(2) -- Remove leading "/"
+              local cwd = vim.fn.getcwd()                                -- Get the current working directory
+              local home = vim.fn.expand("~")                            -- Get the home directory
+              local trimmed_path = cwd:gsub("^" .. home .. "/[^/]+", "") -- Remove the home directory and the first-level folder
+              local filename = vim.fn.expand("%:t")                      -- Get the current filename (base name only)
+
+              -- Clean up path or fallback to full path and add the filename
+              local display_path = (trimmed_path == "" and cwd or trimmed_path:sub(2)) -- Remove leading "/"
+              return display_path .. "/" .. filename
             end,
           },
         },
-        lualine_x = { 'encoding', 'fileformat', 'filetype' },
-        lualine_y = { 'progress' },
-        lualine_z = { 'location' }
+        -- lualine_x = { 'encoding', 'fileformat', 'filetype' },
+        -- lualine_y = { 'progress' },
+        -- lualine_z = { 'location' }
       }
     })
   end,

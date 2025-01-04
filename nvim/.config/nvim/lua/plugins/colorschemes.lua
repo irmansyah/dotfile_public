@@ -42,7 +42,8 @@ return {
           bright_orange = orange,
         },
         highlight = {
-          enable = true,
+          -- enable = true,
+          enable = false,
         },
         overrides = {
           Directory = { fg = yellow },

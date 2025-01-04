@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
+
 # export TERM=xterm-256color
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -117,3 +118,6 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# Created by `pipx` on 2025-01-03 01:31:46
+export PATH="$PATH:/home/mane/.local/bin"

@@ -1,9 +1,11 @@
 # Include specific directories
-# !nvim/
-# !alacritty/
-# !tmux/
-# !i3/
-# !polybar/
+!dunst/.config/
+!ghostty/.config/
+!i3/.config/
+!nvim/.config/
+!polybar/.config/
+!tmux/.tmux.conf
+!zsh/.zshrc
 
 tt.*
 .tests
