@@ -25,7 +25,7 @@ i3lock \
   --keyhl-color=db5757ff \
   --bshl-color=db5757ff \
   --separator-color=00000000 \
-  --inside-wrong-color=db5757ff \
+  # --inside-wrong-color=db5757ff \
   --ring-wrong-color=db5757ff \
   --verif-text="Verifying..." \
   --verif-text-color=00ff00ff \

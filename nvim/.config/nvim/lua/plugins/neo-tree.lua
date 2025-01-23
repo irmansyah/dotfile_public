@@ -110,8 +110,11 @@ return {
           position = "bottom",
           width = 32,
           height = 20,
-          ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
-          -- ["P"] = { "custom_image_preview", use_float = true },
+          mappings = {
+            ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
+            ["<esc>"] = "close_window",
+            -- ["P"] = { "custom_image_preview", use_float = true },
+          },
         },
         commands = {
         },
@@ -173,6 +176,10 @@ return {
           end
         end
         vim.cmd(neotree_command)
+      end
+
+      function CloseNeoTree()
+        vim.cmd("bd") -- Close the current buffer
       end
 
       -- vim.keymap.set("n", "<C-t>", ":Neotree filesystem reveal toggle<CR>", {})

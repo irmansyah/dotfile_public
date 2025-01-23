@@ -66,3 +66,18 @@ vim.cmd [[
   tnoremap <C-q> <C-\><C-n>:q!<CR>
 
 ]]
+
+vim.api.nvim_create_autocmd("BufReadPre", {
+    pattern = "*",
+    callback = function()
+        local max_filesize = 1024 * 1024 -- 1 MB in bytes
+        local stats = vim.loop.fs_stat(vim.fn.expand("<afile>"))
+        if stats and stats.size > max_filesize then
+            vim.cmd("syntax off")
+            vim.cmd("setlocal eventignore+=FileType")
+            vim.cmd("setlocal foldmethod=manual")
+            vim.cmd("setlocal undolevels=-1")
+            vim.notify("Large file detected! Plugins disabled.")
+        end
+    end,
+})

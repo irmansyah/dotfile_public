@@ -68,9 +68,9 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source ~/.custom_dev/custom_dev.zsh
-source ~/.custom_dev/sshrc.zsh
-source ~/.custom_dev/input_device.zsh
+source ~/.dotfiles/zsh/.custom_dev/custom_dev.zsh
+source ~/.dotfiles/zsh/.custom_dev/sshrc.zsh
+source ~/.dotfiles/zsh/.custom_dev/input_device.zsh
 
 # # Load custom key map configurations
 # xmodmap ~/.config/key-map/mouse.Xmodmap

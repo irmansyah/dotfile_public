@@ -51,11 +51,13 @@ return {
       lspconfig.lua_ls.setup {
         capabilities = capabilities
       }
-      lspconfig.html.setup({
+      lspconfig.html.setup {
         capabilities = capabilities
-      })
-
+      }
       lspconfig.cssls.setup {
+        capabilities = capabilities,
+      }
+      lspconfig.pyright.setup {
         capabilities = capabilities,
       }
       lspconfig.rust_analyzer.setup {

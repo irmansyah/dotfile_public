@@ -35,4 +35,4 @@ function ToggleResizeHeight()
     end
 end
 
-setkeymap('n', '<leader>t', ':lua ToggleResizeHeight()<CR>', { noremap = true, silent = true })
+-- setkeymap('n', '<leader>t', ':lua ToggleResizeHeight()<CR>', { noremap = true, silent = true })

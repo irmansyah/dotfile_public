@@ -231,8 +231,10 @@ for_window [class="WORK_DOC"] floating enable, resize set 1201px 1000px, move ab
 for_window [class="WORK_SSH"] floating enable, resize set 1200px 1000px, move absolute position center, move scratchpad, scratchpad show
 for_window [class="scrcpy"] floating enable, resize set 490px 1120px, move scratchpad, scratchpad show
 for_window [class="Gpick"] floating enable, resize set 800px 600px, move scratchpad, scratchpad show
-for_window [class="TelegramDesktop"] floating enable, resize set 1600px 1000px, move scratchpad, scratchpad show
+for_window [class="Matplotlib"] floating enable, resize set 1200px 1000px, move absolute position center, move scratchpad, scratchpad show
+for_window [class="TelegramDesktop"] floating enable, resize set 1400px 1000px, move scratchpad, scratchpad show
 for_window [class="TelegramDesktop"] border normal
+for_window [class="vlc"] floating enable, resize set 1400px 1000px, move scratchpad, scratchpad show
 for_window [class="ghostty"] border normal
 
 for_window [title="Emulator"] floating enable, resize set 1600px 1000px, move scratchpad, scratchpad show
@@ -270,10 +272,10 @@ bindsym $mod+n exec echo "cursor_mover_show" | socat - UNIX-CONNECT:/tmp/cursor_
 # Start Some App
 exec --no-startup-id cursor_mover
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
-exec --no-startup-id nitrogen --restore
 exec --no-startup-id python ~/.config/i3/scripts/i3-autosplit/i3-autosplit.py
 exec --no-startup-id ~/.config/i3/scripts/display-input.sh
 exec --no-startup-id ~/.config/key-map/touchpad_settings.sh
 exec --no-startup-id ~/.config/polybar/scripts/launch.sh
 exec --no-startup-id /usr/local/bin/touchpad-drag.sh
 exec --no-startup-id xrandr --output DP-1 --mode 2560x1440 --pos 0x0 --primary --output eDP-1 --mode 1920x1080 --pos 2560x0
+exec --no-startup-id feh --bg-fill ~/.config/Wallpapers/rusty_steal_1440.jpg --bg-fill ~/.config/Wallpapers/rusty_steal_1080.jpg

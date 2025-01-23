@@ -33,6 +33,7 @@ return {
         inverse = true,
         contrast = "hard",
         palette_overrides = {
+          bg = "#0B0A0A",
           bright_red = red,
           bright_green = green,
           bright_yellow = yellow,
@@ -42,7 +43,6 @@ return {
           bright_orange = orange,
         },
         highlight = {
-          -- enable = true,
           enable = false,
         },
         overrides = {

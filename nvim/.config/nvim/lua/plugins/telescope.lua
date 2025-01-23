@@ -84,6 +84,16 @@ return {
         }):find()
       end
 
+      function close_telescope()
+        local bufnrs = vim.api.nvim_list_bufs()
+        for _, bufnr in ipairs(bufnrs) do
+          local bufname = vim.api.nvim_buf_get_name(bufnr)
+          if bufname == "" or bufname == "[No Name]" then
+            vim.api.nvim_buf_delete(bufnr, { force = true })
+          end
+        end
+      end
+
       vim.api.nvim_set_keymap('n', '<leader>fe', ':lua show_error_files()<CR>', { noremap = true, silent = true })
 
       -- Other keymaps for built-in Telescope functions
@@ -94,6 +104,7 @@ return {
 
       -- Additional keymap for buffers using built-in Telescope function
       vim.api.nvim_set_keymap("n", "<leader>bb", ":Telescope buffers<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<esc>", ":lua close_telescope()<CR>", { noremap = true, silent = true })
 
 
       -- Load the ui-select extension
